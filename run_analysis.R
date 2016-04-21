@@ -38,10 +38,10 @@ filename <- "getdata_dataset.zip"
   mean_and_std_features <- grep("-(mean|std)\\(\\)", features[, 2])
   
   # subset the desired columns
-  x_subset <- x_data[, mean_and_std_features]
+  x_data <- x_data[, mean_and_std_features]
   
   # correct the column names
-  names(x_subset) <- features[mean_and_std_features, 2]
+  names(x_data) <- features[mean_and_std_features, 2]
 
 ##################################################################################
 #Step 3:  Uses descriptive activity names to name the activities in the data set
